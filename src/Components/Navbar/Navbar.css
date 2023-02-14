@@ -1,5 +1,10 @@
-.navnbar {
+.navbar {
     margin: 0 auto;
-    color: red;
-    border: 2 px solid #000;
+    justify-content: space-around;
+}
+
+.navbar-brand {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
 }

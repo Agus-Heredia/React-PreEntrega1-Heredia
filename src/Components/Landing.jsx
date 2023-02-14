@@ -8,7 +8,7 @@ const Landing = () => {
     <>
 
     <Navbar />
-    <ItemListContainer greeting="Hola! Bienvenido a mi tienda virtual :)"/>
+    <ItemListContainer greeting="Hola! Bienvenidos a la página ofical de Bballers 🏀. En este espacio encontrarás los mejores accesorios deportivos y al mejor precio! Para que puedsa simepre estar listo para dar lo mejor adentro de la cancha."/>
 
 
 
