@@ -1,0 +1,16 @@
+.cart {
+    display: flex;
+    flex-direction: space-between;
+}
+
+
+.cartIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.cartBadge {
+    font-size: 20px;
+    color: #000;
+
+}
