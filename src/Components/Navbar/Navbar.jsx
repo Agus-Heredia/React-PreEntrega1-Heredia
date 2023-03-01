@@ -2,27 +2,35 @@ import React from 'react'
 import CartWidget from '../Cart/CartWidget';
 import "./Navbar.css"
 
-const navbar = () => {
+import { Link } from 'react-router-dom';
+
+
+const Navbar = () => {
 
   return (
     <>
       <div className="navbar" style={{ border: "2px solid #000", gap: "10px" }}>
-        <nav className="navbar navbar-expand-lg">
-          <a className="navbar-brand" href="#">Bballers</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+
+        <nav className="navbar navbar-expand-lg">  
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" href="#">Productos</a>
+              
+              <li>  {/*Inicio*/}
+                 <Link to={'/'} className='brandTitle'>Bballers</Link> 
               </li>
-              <li class="nav-item">
-                <a className="nav-link" href="#">Contacto</a>
+
+              <li> {/*Productos*/}
+              <Link to={"/products"} className='navItems'>Categorías</Link>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Medios de Pago</a>
+
+              <li> {/*Contacto*/}
+                <Link to={"/contact"} className='navItems'>Contacto</Link>
               </li>
+
+              <li> {/*Info*/}
+              <Link to={"/info"} className='navItems'>Información</Link>
+              </li>
+
               <div>
                 <CartWidget />
               </div>
@@ -39,4 +47,4 @@ const navbar = () => {
 
 };
 
-export default navbar
+export default Navbar

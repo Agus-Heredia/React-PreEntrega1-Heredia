@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "category": "zapatillas",
+        "name": "Nike Air 1",
+        "price": 100,
+        "img": "",
+        "description":" Descripcion zapatillas 1"     
+    },
+
+    {
+        "id": 2,
+        "category": "zapatillas",
+        "name": "Nike Air 2",
+        "price": 200,
+        "img": "",
+        "description":" Descripcion zapatillas 2"   
+    },
+    {
+        "id": 3,
+        "category": "zapatillas",
+        "name": "Nike Air 3",
+        "price": 300,
+        "img": "",
+        "description":" Descripcion zapatillas 3"   
+    }
+    
+]
