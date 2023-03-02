@@ -16,12 +16,14 @@ const ItemListDetail = () => {
 
   return (
     <div>
-        <h1>Acá verás tu item</h1>
+        
+        {/* Como estamos en "ItemDetails" acá solo renderizará el item que el usuario haya seleccionado en el inicio de la pág  */}
+
         <ul>
             {
                 itemList.map(item => {
                     <li>
-                        <Link to="/products/${item.id}">{item.title}</Link>
+                        <Link to="/item/${item.id}">{item.title}</Link>
                         
                     </li>
                 })

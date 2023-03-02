@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemListContainer from './Container/itemListContainer'
+import ItemListContainer from './ItemContainer/itemListContainer'
 import "./Landing.css"
 
 const Landing = () => {

@@ -1,3 +1,8 @@
+* {
+    background-color: #EEE8AA;
+    color: #000;
+}
+
 .message {
     font-size: 20px;
     padding: 10px;
