@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ContactView from './Components/Contact/ContactView';
-import Info from './Components/Info/Info';
 
 import Landing from './Components/Landing';
 import Navbar from './Components/Navbar/Navbar';
-import Products from './Components/Products/Products';
+import TShirtsSection from './Components/camisetas/TshirtsSection';
+import ShoesSection from './Components/zapatillas/shoesSection';
+import ShortsSection from './Components/Shorts/ShortsSection';
+import ItemListDetail from './Components/ItemDetail/ItemListDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,9 +20,10 @@ root.render(
       <Routes>
 
         <Route exact path='/' element={<Landing />} />
-        <Route exact path='/products' element={<Products />} />
-        <Route exact path='/contact' element={<ContactView />} />
-        <Route exact path='/info' element={<Info />} />
+        <Route exact path='/item/item:id' element={<ItemListDetail />} />
+        <Route exact path='/zapatillas/' element={<ShoesSection />} />
+        <Route exact path='/camisetas' element={<TShirtsSection />} />
+        <Route exact path='/pantalones' element={<ShortsSection />} />
 
       </Routes>
     </BrowserRouter>

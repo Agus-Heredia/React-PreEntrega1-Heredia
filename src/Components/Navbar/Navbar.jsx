@@ -20,15 +20,15 @@ const Navbar = () => {
               </li>
 
               <li> {/*Productos*/}
-              <Link to={"/products"} className='navItems'>Productos</Link>
+              <Link to={"/zapatillas"} className='navItems'>Zapatillas</Link>
               </li>
 
               <li> {/*Contacto*/}
-                <Link to={"/contact"} className='navItems'>Contacto</Link>
+                <Link to={"/camisetas"} className='navItems'>Camisetas</Link>
               </li>
 
               <li> {/*Info*/}
-              <Link to={"/info"} className='navItems'>Información</Link>
+              <Link to={"/pantalones"} className='navItems'>Pantalones</Link>
               </li>
 
               <div>

@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import "./itemListContainer.css"
 
 import { Link } from 'react-router-dom'
 
-const ItemListContainer = (props) => {
+const ItemListDetail = () => {
 
-    const [items, setItems] = useState([])
+    const [itemList, setItemList] = useState([])
     
     useEffect(() => {
         fetch('https://fakestoreapi.com/products') //Api de simulación hasta que trabajemos con Firebase
         .then(resp => resp.json())
-        .then(dataItem => setItems(dataItem))
-        
+        .then(dataItem => setItemList(dataItem))
     }, [])
     
 
 
   return (
     <div>
-        <p style={{fontSize:"20px", padding:"10px"}}>Acá se mostrarán todos los productos de la tienda</p>
+        <h1>Acá verás tu item</h1>
         <ul>
             {
-                items?.map(item => {
+                itemList.map(item => {
                     <li>
-                        <Link to={`/item/${item.id}`}>{item.title}</Link>
+                        <Link to="/products/${item.id}">{item.title}</Link>
                         
                     </li>
                 })
@@ -35,4 +33,4 @@ const ItemListContainer = (props) => {
   )
 }
 
-export default ItemListContainer
+export default ItemListDetail
