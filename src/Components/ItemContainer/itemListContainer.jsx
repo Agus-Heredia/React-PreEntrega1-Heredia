@@ -1,49 +1,38 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import "./itemListContainer.css"
-
-import { Link } from 'react-router-dom'
+import HandleProducts from '../HandleProducts/HandleProducts'
+import { CartContext } from '../Context/CartContext'
 
 const ItemListContainer = (props) => {
 
-    const [items, setItems] = useState([])
-    
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products') //Api de simulación hasta que trabajemos con Firebase
-        .then(resp => resp.json())
-        .then(dataJson => setItems(dataJson))
-        
-    }, [])
-    
+const { addToCart, deleteFromCart } = useContext(CartContext)
 
-
-  return (
+  return(
     <div>
-        <div style={{fontSize:"20px", padding:"10px"}}>
-            ¡Hola! Bienvenidos a la página ofical de Bballers 🏀. En este espacio encontrarás los mejores accesorios deportivos y al mejor precio! Para que puedas estar siempre listo para dar lo mejor adentro de la cancha.<br/>
-            Acá se mostrarán todos los productos disponibles en la tienda... ¡pronto!</div>
+        <div>
+            
+            <h1 style={{
+                    marginTop:"50px",
+                    marginLeft:"10px",
+                    fontSize:"50px",
+                }}>
+               Bienvenidos a la Tienda Virtual de Bballers
+            </h1>
 
+            <p style={{
+                padding:"10px",
+                fontSize:"20px",
 
+            }}> 
+                En este espacio encontrarás los mejores accesorios deportivos y al mejor precio! Para que puedas estar siempre listo para dar lo mejor adentro de la cancha
+            </p>
+            
+        </div>
 
-        {/**************** 
-         * 
-         
-         Hola tutores! Miren les escribo por acá porque no entiendo porqué este .map() que van a ver a continuación no me funciona para renderizar las cards como quisiera... algún consejo? 
-         
-         * ************/}
-
-
-
-        <ul>
-            {
-                items.map(item => {
-                    <li>
-                        <Link to={`/item/${item.id}`}>{item.title}</Link>
-                        
-                    </li>
-                })
-            }
-        </ul> 
-
+        <HandleProducts />
+       
+        
+        
     </div>
   )
 }
