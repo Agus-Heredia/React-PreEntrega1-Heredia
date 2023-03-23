@@ -67,8 +67,8 @@ const HandleProducts = () => {
                                         borderRadius:"20px"
                                     }}/>
                                     <h2 style={{backgroundColor:"#fff", fontStyle:"italic"}}>{item.name}</h2>
-                                    <p style={{backgroundColor:"#fff", textAlign:"center"}}>{item.description}</p>
-                                    <p style={{backgroundColor:"#fff", fontWeight:"700"}}>Precio: usd$ {item.price}</p>
+                                    {/* <p style={{backgroundColor:"#fff", textAlign:"center"}}>{item.description}</p> */}
+                                    <p style={{backgroundColor:"#fff", fontWeight:"700"}}>Precio: usd ${item.price}</p>
                                     
                                     
                                     <div style={{background:"#fff"}}>
@@ -76,7 +76,7 @@ const HandleProducts = () => {
                                         backgroundColor:"#fff",
                                         textDecoration:"none",
                                         border:"1px solid blue",
-                                        padding:"5px",
+                                        padding:"8px",
                                         borderRadius:"30px",
                                         color:"blue"
 
@@ -87,10 +87,10 @@ const HandleProducts = () => {
                                         backgroundColor:"blue",
                                         textDecoration:"none",
                                         border:"1px solid blue",
-                                        padding:"5px",
+                                        padding:"8px",
                                         borderRadius:"30px",
                                         color:"#fff",
-                                        marginLeft:"10px"
+                                        marginLeft:"10px",
                                     }} 
                                     onClick={() => addToCart(item, 1)}>
                                         Agregar al carrito

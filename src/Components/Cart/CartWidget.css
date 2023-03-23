@@ -1,17 +1,26 @@
 .cart {
     display: flex;
+    align-items: center;
     margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    margin: 5px;
+    
 }
 
 
 .cartIcon {
     width: 25px;
     height: 25px;
+    border: none;
+    
+
 
 }
 
 .cartBadge {
     font-size: 20px;
     color: #000;
+    margin: 3px;
 
 }

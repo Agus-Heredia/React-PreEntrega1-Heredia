@@ -11,6 +11,7 @@ import ItemListContainer from './Components/ItemContainer/itemListContainer';
 
 import { initializeApp } from "firebase/app";
 import CartProvider from './Components/Context/CartContext';
+import Footer from './Components/Footer/Footer';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAtIrcIQpAxHq0sIzjl53rOXqmFezKNP9o",
@@ -39,6 +40,7 @@ root.render(
                   <Route exact path='/camisetas' element={<TShirtsSection />} />
                   <Route exact path='/pantalones' element={<ShortsSection />} />
               </Routes>
+            <Footer />
         </BrowserRouter>
   </CartProvider>
 

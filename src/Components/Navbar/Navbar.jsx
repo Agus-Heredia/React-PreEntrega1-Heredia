@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar" style={{ border: "2px solid #000", gap: "10px" }}>
+      <div className="navbar">
 
         <nav className="navbar navbar-expand-lg">  
           <div className="collapse navbar-collapse" id="navbarNav">

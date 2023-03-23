@@ -15,6 +15,8 @@ const { addToCart, deleteFromCart } = useContext(CartContext)
                     marginTop:"50px",
                     marginLeft:"10px",
                     fontSize:"50px",
+                    display:"flex",
+                    justifyContent:"center",
                 }}>
                Bienvenidos a la Tienda Virtual de Bballers
             </h1>
@@ -22,9 +24,11 @@ const { addToCart, deleteFromCart } = useContext(CartContext)
             <p style={{
                 padding:"10px",
                 fontSize:"20px",
+                display:"flex",
+                justifyContent:"center",
 
             }}> 
-                En este espacio encontrarás los mejores accesorios deportivos y al mejor precio! Para que puedas estar siempre listo para dar lo mejor adentro de la cancha
+                En este espacio encontrarás los mejores accesorios deportivos ¡y al mejor precio! Para que puedas estar siempre listo y dar lo mejor adentro de la cancha
             </p>
             
         </div>

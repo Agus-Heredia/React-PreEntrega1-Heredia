@@ -1,7 +1,8 @@
 .navbar {
     background-color: #EEE8AA;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding: 10px;
 }
 
 .navbar-brand {
@@ -10,27 +11,41 @@
     font-size: 25px;
 }
 
-.brandLogo {
-    display: flex;
-    flex-direction: row;
-}
-
 .brandTitle {
     color: black;
     text-decoration: none;
     font-size: 30px;
-    margin: 0px 10px;
+    margin: 5px;
     font-style: italic;
     font-weight: 500;
-    padding:3px;
+    border-radius: 10px;
 
+    padding: 5px;
+
+}
+
+.brandTitle:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 1s all;
 }
 
 .navItems{
     color: black;
     text-decoration: none;
     font-size: 20px;
-    margin: 10px 10px;
-    
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
 
+
+}
+
+.navItems:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .5s all;
 }
