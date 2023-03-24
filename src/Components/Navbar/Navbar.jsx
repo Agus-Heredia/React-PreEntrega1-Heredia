@@ -3,7 +3,7 @@ import CartWidget from '../Cart/CartWidget';
 import "./Navbar.css"
 import { CartContext } from '../Context/CartContext';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -20,19 +20,19 @@ const Navbar = () => {
             <ul className="navbar-nav">
               
               <li>  {/*Inicio*/}
-                 <Link to={'/'} className='brandTitle'>Bballers</Link> 
+                 <NavLink to={'/'} className='brandTitle'>Bballers</NavLink> 
               </li>
 
               <li> {/*Zapatillas*/}
-              <Link to={"/zapatillas"} className='navItems'>Zapatillas</Link>
+              <NavLink to={"/category/zapatillas"} className='navItems'>Zapatillas</NavLink>
               </li>
 
               <li> {/*Camisetas*/}
-                <Link to={"/camisetas"} className='navItems'>Camisetas</Link>
+                <NavLink to={"/category/camisetas"} className='navItems'>Camisetas</NavLink>
               </li>
 
               <li> {/*Pantalones*/}
-              <Link to={"/pantalones"} className='navItems'>Pantalones</Link>
+              <NavLink to={"/category/pantalones"} className='navItems'>Pantalones</NavLink>
               </li>
 
               <div>

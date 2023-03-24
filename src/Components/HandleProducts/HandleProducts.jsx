@@ -2,11 +2,10 @@ import React, { useContext } from 'react'
 import { getDocs, getFirestore, collection } from "firebase/firestore";
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
-
 import { useEffect, useState } from "react";
 
 const HandleProducts = () => {
-    const { addToCart, removeFromCart} = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
 
     const [products, setProducts] = useState([])
 

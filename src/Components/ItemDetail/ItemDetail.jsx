@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./ItemStyles.css"
+import { Link } from 'react-router-dom'
+import { CartContext } from '../Context/CartContext'
+
 
 const ItemDetail = ({ product }) => {
+
+    const { cart, addToCart, getTotalQuantity} = useContext(CartContext)
     return (
         <div
             style={{
@@ -13,8 +18,8 @@ const ItemDetail = ({ product }) => {
                 margin: "60px auto",
                 border: "1px solid #000",
                 borderRadius: "50px",
-                padding:"10px",
-                boxShadow:"5px 20px 30px"
+                padding: "10px",
+                boxShadow: "5px 20px 30px"
 
 
             }}>
@@ -40,24 +45,39 @@ const ItemDetail = ({ product }) => {
                 <p style={{ background: "#fff" }}>▸ {product.description}</p>
                 <p style={{ background: "#fff" }}><b>Precio:</b> usd ${product.price}</p>
                 <p>Stock disponible: {product.stock}</p>
+                <div style={{display:"flex"}}>
                 <button
                     style={{
                         backgroundColor: "blue",
                         textDecoration: "none",
-                        border:"none",
+                        border: "none",
                         padding: "10px",
                         borderRadius: "30px",
                         color: "#fff",
-                        fontSize:"18px",
-                        width:"100%",
-                        display:"flex",
-                        justifyContent:"center",
-                        
-    
+                        fontSize: "18px",
+                        width: "100%",
+                        height:"50px",
+                        display: "flex",
+                        justifyContent: "center",
+
+
                     }}
-                    >
+                    onClick={() => addToCart(cart)}>
                     ¡Comprar!
                 </button>
+                </div>
+                <div style={{marginTop:"10px", display:"flex", justifyContent:"end"}}>
+                <Link to={"/"}
+                    style={{
+                        backgroundColor: "#fff",
+                        fontSize:"16px",
+                        textDecoration: "none",
+                        padding: "8px",
+                        borderRadius: "30px",
+                        color: "blue"
+
+                    }}>↺ Volver al inicio</Link>
+                </div>
             </div>
 
         </div>

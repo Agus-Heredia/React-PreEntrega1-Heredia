@@ -8,7 +8,7 @@ const Footer = () => {
             width:"100%",
             height:"70px",
             fontSize:"18px",
-            fontWeight:"400",
+            fontWeight:"600",
             display:"flex",
             justifyContent:"center",
             alignItems:"center",

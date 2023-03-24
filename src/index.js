@@ -36,6 +36,7 @@ root.render(
               <Routes>
                   <Route exact path='/' element={<ItemListContainer />} />
                   <Route exact path='/item/:itemId' element={<ItemListDetail />} />
+                  <Route exact path='/category/:categoryId' element={<ItemListContainer />} />
                   <Route exact path='/zapatillas/' element={<ShoesSection />} />
                   <Route exact path='/camisetas' element={<TShirtsSection />} />
                   <Route exact path='/pantalones' element={<ShortsSection />} />
