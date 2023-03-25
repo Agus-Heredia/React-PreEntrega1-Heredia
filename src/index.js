@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
-import TShirtsSection from './Components/camisetas/TshirtsSection';
-import ShoesSection from './Components/zapatillas/shoesSection';
-import ShortsSection from './Components/shorts/ShortsSection';
+// import TShirtsSection from './Components/camisetas/TshirtsSection';
+// import ShoesSection from './Components/zapatillas/shoesSection';
+// import ShortsSection from './Components/shorts/ShortsSection';
 import ItemListDetail from './Components/ItemDetail/ItemListDetail';
 import ItemListContainer from './Components/ItemContainer/itemListContainer';
 
@@ -37,9 +37,9 @@ root.render(
                   <Route exact path='/' element={<ItemListContainer />} />
                   <Route exact path='/item/:itemId' element={<ItemListDetail />} />
                   <Route exact path='/category/:categoryId' element={<ItemListContainer />} />
-                  <Route exact path='/zapatillas/' element={<ShoesSection />} />
+                  {/* <Route exact path='/zapatillas/' element={<ShoesSection />} />
                   <Route exact path='/camisetas' element={<TShirtsSection />} />
-                  <Route exact path='/pantalones' element={<ShortsSection />} />
+                  <Route exact path='/pantalones' element={<ShortsSection />} /> */}
               </Routes>
             <Footer />
         </BrowserRouter>

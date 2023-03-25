@@ -12,23 +12,23 @@ const ItemListContainer = (props) => {
 const [itemsList, setItemsList] = useState([])
 const { categoryId } = useParams() 
 
-useEffect(() => {
+// useEffect(() => {
    
-    const db = getFirestore();
+//     const db = getFirestore();
 
-    const itemRefCollection = collection(db, "items")
-    const referenciaDoc = doc(itemRefCollection, categoryId)
-    getDoc(referenciaDoc)
-    .then((response) => {
-      if(categoryId){
-        setItemsList(response.filter(producto => producto.categoryId === categoryId))
-      } else{
-        setItemsList(response)
-      }
-    }) 
-    .catch((err) => console.error(err))
+//     const itemRefCollection = collection(db, "items")
+//     const referenciaDoc = doc(itemRefCollection, categoryId)
+//     getDoc(referenciaDoc)
+//     .then((response) => {
+//       if(categoryId){
+//         setItemsList(response.filter(producto => producto.categoryId === categoryId))
+//       } else{
+//         setItemsList(response)
+//       }
+//     }) 
+//     .catch((err) => console.error(err))
    
-  }, [categoryId])
+//   }, [categoryId])
 
 
   return(
