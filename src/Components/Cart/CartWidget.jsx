@@ -40,6 +40,7 @@ const CartWidget = () => {
                             <div style={{
                                 border:"1px solid #000",
                                 padding:"10px",
+                                margin:"5px"
 
 
                             }}>
