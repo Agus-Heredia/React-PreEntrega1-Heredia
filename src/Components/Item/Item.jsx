@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../Context/CartContext';
 
 
-const Item = ({ id, name, imgId, price }) => {
+const Item = ({ id, name, imgId, price, product}) => {
   const { cart, addToCart } = useContext(CartContext)
 
 
@@ -57,7 +57,7 @@ const Item = ({ id, name, imgId, price }) => {
               color: "#fff",
               marginLeft: "10px",
             }}
-          onClick={() => addToCart(item, 1)}
+          onClick={() => addToCart(product, 1)}
           >
             Agregar al carrito
           </button>

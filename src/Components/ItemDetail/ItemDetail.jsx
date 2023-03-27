@@ -62,7 +62,7 @@ const ItemDetail = ({ product }) => {
 
 
                     }}
-                    onClick={() => addToCart(cart)}>
+                    onClick={() => addToCart(product, 1)}>
                     ¡Comprar!
                 </button>
                 </div>

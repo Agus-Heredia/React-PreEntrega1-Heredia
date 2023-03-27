@@ -47,15 +47,21 @@ const CartWidget = () => {
                                 <ul>
                                     {
                                         cart.map(item => (
+                                            <>
                                             <li>
                                                <span><i> Producto:</i> <b>{item.name}</b></span>  ⁞ 
                                                <span><i> Cantidad:</i> <b>{item.quantity}</b></span>  ⁞ 
                                                <span><i> Precio: </i> <b>usd ${item.price}</b></span>
-                                                
                                             </li>
-
+                                            <div>
+                                            <span>Precio Total: {getTotal(item)}</span>
+                                            </div>
+                                            </>
                                         ))
+                                        
                                     }
+
+
                                 </ul>
                             </div>
                 
