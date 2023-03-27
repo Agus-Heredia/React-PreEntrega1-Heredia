@@ -31,7 +31,7 @@ const CartWidget = () => {
                         cart.length > 0 ?  
                         <span className="cartBadge" onClick={addToCart}>{cart.length}</span>
                         :
-                        console.log("nada para mostrar")
+                        console.log("No hay productos en el carrito para mostrar")
 
                     }
                     

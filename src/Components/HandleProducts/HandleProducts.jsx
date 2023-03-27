@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
 import { useEffect, useState } from "react";
 
-const HandleProducts = () => {
+const HandleProducts = ({data}) => {
     const { addToCart } = useContext(CartContext)
 
     const [products, setProducts] = useState([])
@@ -36,7 +36,7 @@ const HandleProducts = () => {
         //Mapeo de database para renderizar los productos
         <div style={{
             display:"flex",
-            flexWrap:"wrap",
+            flexWrap:"wrap",          
             margin:"20px 100px",
         }}>
                 {
@@ -66,7 +66,6 @@ const HandleProducts = () => {
                                         borderRadius:"20px"
                                     }}/>
                                     <h2 style={{backgroundColor:"#fff", fontStyle:"italic"}}>{item.name}</h2>
-                                    {/* <p style={{backgroundColor:"#fff", textAlign:"center"}}>{item.description}</p> */}
                                     <p style={{backgroundColor:"#fff", fontWeight:"700"}}>Precio: usd ${item.price}</p>
                                     
                                     
