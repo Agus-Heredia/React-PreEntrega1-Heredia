@@ -8,23 +8,23 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-  const { cart, addToCart, deleteFromCart, getTotalQuantity, getTotal } = useContext(CartContext) 
+  const { cart, addToCart, deleteFromCart, getTotalQuantity, getTotal } = useContext(CartContext)
 
 
   return (
     <>
       <div className="navbar">
 
-        <nav className="navbar navbar-expand-lg">  
+        <nav className="navbar navbar-expand-lg">
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              
+
               <li>  {/*Inicio*/}
-                 <NavLink to={'/'} className='brandTitle'>Bballers</NavLink> 
+                <NavLink to={'/'} className='brandTitle'>Bballers</NavLink>
               </li>
 
               <li> {/*Zapatillas*/}
-              <NavLink to= {"/category/zapatillas"} className='navItems'>Zapatillas</NavLink>
+                <NavLink to={"/category/zapatillas"} className='navItems'>Zapatillas</NavLink>
               </li>
 
               <li> {/*Camisetas*/}
@@ -32,11 +32,18 @@ const Navbar = () => {
               </li>
 
               <li> {/*Pantalones*/}
-              <NavLink to={"/category/pantalones"} className='navItems'>Pantalones</NavLink>
+                <NavLink to={"/category/pantalones"} className='navItems'>Pantalones</NavLink>
               </li>
 
+              <div> {/*Carrito*/}
+                <NavLink to={"/cartDetail"} style={{textDecoration:"none", alignItems:"center"}}>
+                  <CartWidget />
+                </NavLink>
+              </div>
+
+
               <div>
-                <CartWidget />
+                {/* <CartWidget /> */}
               </div>
             </ul>
           </div>

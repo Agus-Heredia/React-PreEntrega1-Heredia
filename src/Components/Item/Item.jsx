@@ -61,7 +61,7 @@ const Item = ({ id, name, imgId, price, product}) => {
           >
             Agregar al carrito
           </button>
-
+            {console.log(cart)}
         </div>
       </div>
   )

@@ -67,8 +67,7 @@ const {categoryId} = useParams()
         </div>
 
             <ItemList products={products} />
-            {console.log(products)}
-        
+            {/* {console.log(products)} */}
         
     </div>
   )
