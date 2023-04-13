@@ -56,6 +56,8 @@ const CartDetail = () => {
     return (
         <>
 
+
+
             <section style={{
                 display: "flex",
                 justifyContent: "center",
@@ -79,7 +81,13 @@ const CartDetail = () => {
 
                     }}>Tu Carrito:</h2>
 
-                    {
+                    {cart.length === 0 ?
+                    <h3 style={{
+                        margin:"10px",
+                        color: "red"
+                    }}>El carrito se encuentra vacío</h3>
+                    
+                    :
                         cart.map(i => (
                             <>
                                 <div key={i.id}>
@@ -113,7 +121,7 @@ const CartDetail = () => {
                             </>
                         ))
                     }
-
+                
 
                     <div style={{
                         display: "flex",
