@@ -1,15 +1,11 @@
 import React, { useContext } from 'react'
 import CartWidget from '../Cart/CartWidget';
 import "./Navbar.css"
-import { CartContext } from '../Context/CartContext';
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
-
-  const { cart, addToCart, deleteFromCart, getTotalQuantity, getTotal } = useContext(CartContext)
-
 
   return (
     <>
@@ -43,7 +39,6 @@ const Navbar = () => {
 
 
               <div>
-                {/* <CartWidget /> */}
               </div>
             </ul>
           </div>

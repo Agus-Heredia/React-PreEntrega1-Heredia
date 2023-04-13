@@ -5,17 +5,6 @@ import { CartContext } from '../Context/CartContext'
 const CartWidget = () => {
     const { cart, addToCart, isInCart, clearCart, deleteFromCart, getTotalQuantity, getTotal} = useContext(CartContext)
 
-    // const [isOpen, setIsOpen] = useState(false)
-
-    // const openedCart = () => {
-    // setIsOpen(true)
-    // };
-
-    // const closedCart = () => {
-    //     setIsOpen(false)
-    
-    // };
-
     return (
         <>
             <button className="cart">
