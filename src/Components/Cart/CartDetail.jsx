@@ -13,18 +13,35 @@ const CartDetail = () => {
     const [buyerEmail, setBuyerEmail] = useState("")
     const [buyerPhone, setBuyerPhone] = useState("")
 
-    const toastAlert = () => {
+    const toastSuccess = () => {
         toast.success("¡Gracias por tu compra!",{
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
-            pauseOnHover: true,
+            pauseOnHover: false,
             draggable: true,
             progress: undefined,
             theme: "colored",
         });
     };
+
+    const toastError = () => {
+        toast.error("Porfavor, agregá productos al carrito o completá correctamente los campos", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    };
+
+
+
+
 
     const order = {
             buyer: {
@@ -35,23 +52,32 @@ const CartDetail = () => {
             },
             items: cart,
             total: getTotal()
-    }
+    } 
 
 
     const handleClick = (e) => {
        
+        e.preventDefault()
         const db = getFirestore();
         const orderCollection = collection(db, "orders")
         addDoc(orderCollection, order)
         .then(({id}) => console.log(id))
-        clearCart()
-        toastAlert()
-        e.preventDefault()
+        
+        if(buyerName !== "" && buyerEmail !== "" && buyerLastName !=="" && buyerPhone !=="" && cart.length !== 0) {
+            clearCart()
+            toastSuccess()
+            } else { 
+                toastError()
+        }
         
         
 
     };
 
+
+    const resetForm = (e) => {
+        e.target.reset()
+    };
 
     return (
         <>
@@ -71,20 +97,28 @@ const CartDetail = () => {
                     display: "flex",
                     flexDirection: "column",
                     width: "800px",
+                    background:"#EEE8AA"
                 }} >
                     <h2 style={{
                         margin: "10px",
-                        fontSize: "30px",
-                        color: "blue"
+                        fontSize: "35px",
+                        textAlign:"center",
+                        color: "blue",
+                        fontFamily:"monospace",
+                        fontWeight:"500",
+                        borderBottom: "1px solid",
 
 
 
-                    }}>Tu Carrito:</h2>
+                    }}>Tu Carrito</h2>
 
                     {cart.length === 0 ?
                     <h3 style={{
-                        margin:"10px",
-                        color: "red"
+                        margin:"20px",
+                        fontSize:"20px",
+                        textAlign:"center",
+                        color: "red",
+                        fontStyle:"italic", 
                     }}>El carrito se encuentra vacío</h3>
                     
                     :
@@ -159,7 +193,7 @@ const CartDetail = () => {
                 }}>
                     <h2 style={{ fontSize: "22px" }}>Tus datos:</h2>
                     <p style={{ fontWeight: "400", fontStyle: "italic" }}>Porfavor, brindanos tus datos así podemos generarte una orden de compra</p>
-                    <form>
+                    <form onSubmit={(e) => e.target.reset()}>
 
                         <div className="mb-3">
                             <input required type="text" value={buyerName} onChange={(e) => setBuyerName(e.target.value)} className="form-control" id="userName" placeholder="Nombre" />
@@ -179,7 +213,7 @@ const CartDetail = () => {
 
                         <div style={{display:"flex", justifyContent:"space-between"}}>
                         <button type="submit" className="btn" style={{ background: "green", color: "#fff" }}
-                        onClick={handleClick}
+                        onClick={handleClick} 
                         >Finalizar compra</button>
                         <ToastContainer/>
                         </div>
