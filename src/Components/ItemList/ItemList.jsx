@@ -1,17 +1,19 @@
 import React from 'react'
 import Item from '../Item/Item'
+import Loader from '../Loader/Loader'
 
-const ItemList = ({products}) => {
+const ItemList = ({ products }) => {
   return (
     <div style={{
-        display:"flex", 
-        flexWrap:"wrap",
-        justifyContent:"center"
-        
-        }}>
-        { 
-            products.map((product => <Item key={product.id} {...product} product={product}/>))      
-        }
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center"
+
+    }}>
+      {products.length === 0
+        ? <Loader />
+        : products.map((product => <Item key={product.id} {...product} product={product} />))
+      }
     </div>
   )
 }
